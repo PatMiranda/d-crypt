@@ -11,12 +11,20 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
+import { MessagesComponent } from './messages/messages.component';
+import { ChallengeComponent } from './challenge/challenge.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] }
+  { path: 'messages', component: MessagesComponent },
+  { path: 'challenge', component: ChallengeComponent },
+  { path: 'leaderboard', component: LeaderboardComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
+  
 ];
 
 @NgModule({
@@ -25,7 +33,11 @@ const routes: Routes = [
     ProfileComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    MessagesComponent,
+    ChallengeComponent,
+    LeaderboardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
