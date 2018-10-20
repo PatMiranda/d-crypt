@@ -1,2 +1,8 @@
-<app-navbar></app-navbar>
 <h1>Messages</h1>
+
+<!-- ng-repeat loops through data to build list -->
+<ul>
+  <li ng-repeat="users in user">
+      {{user.messages}}
+  </li>
+</ul>
