@@ -21,11 +21,11 @@ body{background:#111;font-family:'Droid Sans',sans-serif;font-size:7pt;color:#d8
 /*SCREEN**************************************/
 .screen-border{background:#272b2a;width:370px;height:490px;margin:auto;border-radius:50px;padding-top:5%;border-top:10px solid #5a5f5b;border-bottom:5px solid #3a3e41;position:relative;z-index:-5;}
 .screen{width:300px;height:435px;position:absolute;margin-left:26px;border-radius:20px;background:#000;border:5px solid #333;padding:5px 5px 5px 0;;overflow:hidden;}
-.screen-reflection{width:285px;height:485px;background:linear-gradient(150deg,#fff,rgba(0,0,0,0));position:relative;z-index:99;opacity:0.07;margin:9px 10px 10px 10px;border-radius:10px;}
+.screen-reflection{width:285px;height:485px;background:linear-gradient(150deg,#fff,rgba(0,0,0,0));position:relative;z-index:-99;opacity:0.07;margin:9px 10px 10px 10px;border-radius:10px;}
 /*SCREEN**************************************/
 
 /*SCAN ***************************************/
-.scan{width:305px;height:150px;background:linear-gradient(rgba(0,0,0,0),#7ff12a);position:absolute;animation:scan;animation-duration:4s;animation-iteration-count: infinite;top:-185px;z-index:99;opacity:0.25;}
+.scan{width:305px;height:150px;background:linear-gradient(rgba(0,0,0,0),#7ff12a);position:absolute;animation:scan;animation-duration:4s;animation-iteration-count: infinite;top:-185px;z-index:-50;opacity:0.25;}
 /*SCAN ***************************************/
 
 /*LINKS***************************************/
@@ -45,24 +45,8 @@ nav span{color:#8df776;line-height:31px;font-size:9pt;letter-spacing:0.3px;margi
 /*nav .active{background:#000;border-right:1px solid #8df776;border-left:1px solid #8df776;border-bottom:1px solid #000;border-top-left-radius:5px;border-top-right-radius:5px;padding:3px 6px 3px 6px;}*/
 nav p{margin:-10px 0 0 0;height:25px;}
 nav .off{color:#172f18;position:relative;left:-5px;}
-.game-text{color:#8df776;}
+.game-text{color:#8df776; z-index: 100;}
 /*NAV***************************************/
-
-/*BOTTOM OF SCREEN***************************************/
-.hud-bar{height:12px;position:absolute;width:490px;bottom:9px;left:15px;background:#000;color:#8df776;z-index:96;border-top:1px solid #8df776;padding-top: 8px;}
-
-.hud1{display:inline-block;}
-.hud1:before{content:"CONTENT";}
-.hud1:after{content:"";display:inline-block;width:9px;height:4px;border:1px solid lightgreen;margin-left:2px;}
-
-.hud2{display:inline-block;margin-left:15px;}
-.hud2:before{content:"MORE CONTENT";}
-.hud2:after{content:"";display:inline-block;width:9px;height:4px;border:1px solid lightgreen;margin-left:2px;}
-
-.hud3{display:inline-block;margin-left:15px;}
-.hud3:before{content:"AND MORE CONTENT";}
-.hud3:after{content:"";display:inline-block;width:9px;height:4px;border:1px solid lightgreen;margin-left:2px;}
-/*BOTTOM OF SCREEN***************************************/
 
 /*DESIGN***************************************/
 .left-speakers{width:35px;position:absolute;top:137px;left:20px}
