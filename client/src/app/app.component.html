@@ -1,17 +1,84 @@
-<div class="navbar navbar-default">
-  <div class="container">
-    <div id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li><a routerLink="/">Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
-        <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a></li>
-        <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
-      </ul>
+<!--<div class="navbar navbar-default">-->
+  <!--<div class="container">-->
+    <!--<div id="navbar-main">-->
+      <!--<ul class="nav navbar-nav">-->
+        <!--<li><a routerLink="/">Home</a></li>-->
+      <!--</ul>-->
+      <!--<ul class="nav navbar-nav navbar-right">-->
+        <!--<li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>-->
+        <!--<li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a></li>-->
+        <!--<li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="console">
+  <div class="console-front">
+    <div class="screen-border">
+      <div class="screen">
+        <div class="screen-reflection"></div>
+        <div class="scan"></div>
+
+        <nav>
+          <span class="active info1"></span>
+          <span class="info2"></span>
+          <span class="info3"></span>
+          <span class="info4"></span>
+          <span class="info5"></span>
+          <p>
+            <span class="line2"></span>
+          </p>
+          <br>
+          <br>
+          <div class="game-text">
+            GAME GOES HERE
+          </div>
+        </nav>
+
+        <div class="hud-bar">
+          <div class="hud1"></div>
+          <div class="hud2"></div>
+          <div class="hud3"></div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
+  <div class="wheel">
+    <div class="tab-names">
+      <li class="info1"></li>
+      <li class="info2"></li>
+      <li class="info3"></li>
+      <li class="info4"></li>
+      <li class="info5"></li>
+    </div>
+    <div class="wheel-shadow"></div>
+    <div class="wheel-shadow"></div>
+    <div class="wheel-shadow"></div>
+    <div class="wheel-shadow"></div>
+    <div class="wheel-shadow"></div>
+    <div class="wheel-plug"></div>
+  </div>
+
+  <div class="speakers">
+    <div class="speaker"></div>
+    <div class="speaker"></div>
+    <div class="speaker"></div>
+    <div class="speaker"></div>
+  </div>
+  <!--<div class="left-speakers">-->
+  <!--<div class="left-speaker"></div>-->
+  <!--<div class="left-speaker"></div>-->
+  <!--<div class="left-speaker"></div>-->
+  <!--<div class="left-speaker"></div>-->
+  <!--<div class="screw3"></div>-->
+  <!--</div>-->
+
+  <div class="bottom-button"></div>
+  <div class="top-right">
+    <div class="power"></div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
