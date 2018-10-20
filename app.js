@@ -51,6 +51,8 @@ app.use(function(req, res, next) {
     next(err);
 });
 
+app.use(express.static('/client'))
+
 // error handlers
 
 // [SH] Catch unauthorised errors
