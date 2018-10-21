@@ -9,7 +9,7 @@ var sendJSONresponse = function(res, status, content) {
 
 module.exports.register = function(req, res) {
 
-  // if(!req.body.name || !req.body.email || !req.body.password) {
+  // if (!req.body.name || !req.body.email || !req.body.password) {
   //   sendJSONresponse(res, 400, {
   //     "message": "All fields required"
   //   });
@@ -20,6 +20,9 @@ module.exports.register = function(req, res) {
 
   user.name = req.body.name;
   user.email = req.body.email;
+  user.alias = 'alias';
+  user.username = 'username';
+  user.lastLogin = Date.now();
 
   user.setPassword(req.body.password);
 
@@ -36,7 +39,7 @@ module.exports.register = function(req, res) {
 
 module.exports.login = function(req, res) {
 
-  // if(!req.body.email || !req.body.password) {
+  // if (!req.body.email || !req.body.password) {
   //   sendJSONresponse(res, 400, {
   //     "message": "All fields required"
   //   });
@@ -53,7 +56,7 @@ module.exports.login = function(req, res) {
     }
 
     // If a user is found
-    if(user){
+    if (user) {
       token = user.generateJwt();
       res.status(200);
       res.json({
@@ -64,5 +67,4 @@ module.exports.login = function(req, res) {
       res.status(401).json(info);
     }
   })(req, res);
-
 };

@@ -8,8 +8,11 @@ export interface UserDetails {
   _id: string;
   email: string;
   name: string;
+  username: string;
+  alias: string;
+  lastLogin: string;
   exp: number;
-  iat: number;
+  iat: number
 }
 
 interface TokenResponse {
@@ -29,13 +32,13 @@ export class AuthenticationService {
   constructor(private http: HttpClient, private router: Router) {}
 
   private saveToken(token: string): void {
-    localStorage.setItem('mean-token', token);
+    localStorage.setItem('dcrypt-token', token);
     this.token = token;
   }
 
   private getToken(): string {
     if (!this.token) {
-      this.token = localStorage.getItem('mean-token');
+      this.token = localStorage.getItem('dcrypt-token');
     }
     return this.token;
   }
@@ -96,7 +99,7 @@ export class AuthenticationService {
 
   public logout(): void {
     this.token = '';
-    window.localStorage.removeItem('mean-token');
+    window.localStorage.removeItem('dcrypt-token');
     this.router.navigateByUrl('/');
   }
 }
