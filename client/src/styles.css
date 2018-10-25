@@ -1,2 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+body{background:#111;font-family: 'Droid', sans-serif;font-size:7pt;color:#d8c99e;font-weight:700;text-transform:uppercase;}

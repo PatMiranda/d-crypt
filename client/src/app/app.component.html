@@ -17,39 +17,39 @@
 <div class="console">
   <div class="console-front">
     <div class="screen-border">
-      <div class="screen">
-        <div class="screen-reflection"></div>
-        <div class="scan"></div>
+      <div class="screen-border-rim">
+        <div class="screen">
+          <div class="screen-reflection"></div>
+          <div class="scan"></div>
 
-        <nav>
-          <span class="active info1"></span>
-          <span class="info2"></span>
-          <span class="info3"></span>
-          <span class="info4"></span>
-          <span class="info5"></span>
-          <p>
-            <span class="line2"></span>
-          </p>
-          <div class="game-text">
-            <router-outlet></router-outlet>
-          </div>
-        </nav>
+          <nav>
+            <span class="active info1"></span>
+            <span class="info2"></span>
+            <span class="info3"></span>
+            <span class="info4"></span>
+            <span class="info5"></span>
+            <p>
+              <span class="line2"></span>
+            </p>
+            <div class="game-text">
+              <router-outlet></router-outlet>
+            </div>
+          </nav>
 
-       
+        </div>
       </div>
-
     </div>
   </div>
 
 
   <div class="wheel">
-    <div class="tab-names">
-      <li class="info1"></li>
-      <li class="info2"></li>
-      <li class="info3"></li>
-      <li class="info4"></li>
-      <li class="info5"></li>
-    </div>
+    <!--<div class="tab-names">-->
+      <!--<li class="info1"></li>-->
+      <!--<li class="info2"></li>-->
+      <!--<li class="info3"></li>-->
+      <!--<li class="info4"></li>-->
+      <!--<li class="info5"></li>-->
+    <!--</div>-->
     <div class="wheel-shadow"></div>
     <div class="wheel-shadow"></div>
     <div class="wheel-shadow"></div>
@@ -63,6 +63,17 @@
     <div class="speaker"></div>
     <div class="speaker"></div>
     <div class="speaker"></div>
+
+      <div class="radios">
+        <input type="radio" name="name" checked />
+        <input type="radio" name="name" />
+        <input type="radio" name="name" />
+        <input type="radio" name="name" />
+        <input type="radio" name="name" />
+        <img src="./assets/img/screw.png" id="stl"><img src="./assets/img/screw.png" id="str"><img src="./assets/img/screw.png" id="sbr"><img src="./assets/img/screw.png" id="sbl">
+      </div>
+
+    <div class="logo">LOGO</div>
   </div>
   <!--<div class="left-speakers">-->
   <!--<div class="left-speaker"></div>-->
@@ -72,11 +83,13 @@
   <!--<div class="screw3"></div>-->
   <!--</div>-->
 
+  <!--<div class="bottom-button"></div>-->
   <div class="bottom-button"></div>
   <div class="top-right">
     <div class="power"></div>
   </div>
 </div>
 <app-navbar></app-navbar>
+
 
 
